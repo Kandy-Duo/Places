@@ -7,12 +7,11 @@
 
 import Foundation
 
-struct Place: Equatable
-{
+struct Place: Equatable {
   
   // MARK: Place info
   var name: String
   
   // MARK: Misc
-  var id: String
+  var id: String?
 }
