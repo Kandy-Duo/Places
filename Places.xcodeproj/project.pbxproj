@@ -13,10 +13,13 @@
 		5BF9D75E2C94E150007EF846 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5BF9D75D2C94E150007EF846 /* Base */; };
 		5BF9D7602C94E151007EF846 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF9D75F2C94E151007EF846 /* Assets.xcassets */; };
 		5BF9D7632C94E151007EF846 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5BF9D7622C94E151007EF846 /* Base */; };
-		5BF9D76E2C94E152007EF846 /* PlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9D76D2C94E152007EF846 /* PlacesTests.swift */; };
 		5BF9D7782C94E152007EF846 /* PlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9D7772C94E152007EF846 /* PlacesUITests.swift */; };
 		5BF9D77A2C94E152007EF846 /* PlacesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9D7792C94E152007EF846 /* PlacesUITestsLaunchTests.swift */; };
 		641BAB1F2D52D0140014E93E /* PlacesMemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BAB1E2D52D00C0014E93E /* PlacesMemStore.swift */; };
+		641BAB262D6132FD0014E93E /* CreatePlaceInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BAB222D6132FD0014E93E /* CreatePlaceInteractorTests.swift */; };
+		641BAB272D6132FD0014E93E /* CreatePlaceWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BAB252D6132FD0014E93E /* CreatePlaceWorkerTests.swift */; };
+		641BAB282D6132FD0014E93E /* CreatePlacePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BAB232D6132FD0014E93E /* CreatePlacePresenterTests.swift */; };
+		641BAB292D6132FD0014E93E /* CreatePlaceViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641BAB242D6132FD0014E93E /* CreatePlaceViewControllerTests.swift */; };
 		642930522D43DF720003D40C /* CreatePlaceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6429304F2D43DF720003D40C /* CreatePlaceRouter.swift */; };
 		642930532D43DF720003D40C /* CreatePlaceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6429304D2D43DF720003D40C /* CreatePlaceModels.swift */; };
 		642930542D43DF720003D40C /* CreatePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642930502D43DF720003D40C /* CreatePlaceViewController.swift */; };
@@ -54,11 +57,14 @@
 		5BF9D7622C94E151007EF846 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF9D7642C94E151007EF846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF9D7692C94E152007EF846 /* PlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BF9D76D2C94E152007EF846 /* PlacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTests.swift; sourceTree = "<group>"; };
 		5BF9D7732C94E152007EF846 /* PlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF9D7772C94E152007EF846 /* PlacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesUITests.swift; sourceTree = "<group>"; };
 		5BF9D7792C94E152007EF846 /* PlacesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		641BAB1E2D52D00C0014E93E /* PlacesMemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesMemStore.swift; sourceTree = "<group>"; };
+		641BAB222D6132FD0014E93E /* CreatePlaceInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaceInteractorTests.swift; sourceTree = "<group>"; };
+		641BAB232D6132FD0014E93E /* CreatePlacePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlacePresenterTests.swift; sourceTree = "<group>"; };
+		641BAB242D6132FD0014E93E /* CreatePlaceViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaceViewControllerTests.swift; sourceTree = "<group>"; };
+		641BAB252D6132FD0014E93E /* CreatePlaceWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaceWorkerTests.swift; sourceTree = "<group>"; };
 		6429304C2D43DF720003D40C /* CreatePlaceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaceInteractor.swift; sourceTree = "<group>"; };
 		6429304D2D43DF720003D40C /* CreatePlaceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaceModels.swift; sourceTree = "<group>"; };
 		6429304E2D43DF720003D40C /* CreatePlacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlacePresenter.swift; sourceTree = "<group>"; };
@@ -135,7 +141,7 @@
 		5BF9D76C2C94E152007EF846 /* PlacesTests */ = {
 			isa = PBXGroup;
 			children = (
-				5BF9D76D2C94E152007EF846 /* PlacesTests.swift */,
+				641BAB202D6132840014E93E /* Scenes */,
 			);
 			path = PlacesTests;
 			sourceTree = "<group>";
@@ -147,6 +153,25 @@
 				5BF9D7792C94E152007EF846 /* PlacesUITestsLaunchTests.swift */,
 			);
 			path = PlacesUITests;
+			sourceTree = "<group>";
+		};
+		641BAB202D6132840014E93E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				641BAB212D61328A0014E93E /* CreatePlace */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		641BAB212D61328A0014E93E /* CreatePlace */ = {
+			isa = PBXGroup;
+			children = (
+				641BAB222D6132FD0014E93E /* CreatePlaceInteractorTests.swift */,
+				641BAB232D6132FD0014E93E /* CreatePlacePresenterTests.swift */,
+				641BAB242D6132FD0014E93E /* CreatePlaceViewControllerTests.swift */,
+				641BAB252D6132FD0014E93E /* CreatePlaceWorkerTests.swift */,
+			);
+			path = CreatePlace;
 			sourceTree = "<group>";
 		};
 		642930582D4439E40003D40C /* Models */ = {
@@ -344,7 +369,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BF9D76E2C94E152007EF846 /* PlacesTests.swift in Sources */,
+				641BAB262D6132FD0014E93E /* CreatePlaceInteractorTests.swift in Sources */,
+				641BAB272D6132FD0014E93E /* CreatePlaceWorkerTests.swift in Sources */,
+				641BAB282D6132FD0014E93E /* CreatePlacePresenterTests.swift in Sources */,
+				641BAB292D6132FD0014E93E /* CreatePlaceViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
