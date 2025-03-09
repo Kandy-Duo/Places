@@ -108,6 +108,7 @@ class PlacesMemStoreTests: XCTestCase {
     func testUpdatePlaceShouldUpdateExistingPlace_OptionalError() {
       // Given
       var placeToUpdate = testPlaces.first!
+      placeToUpdate.name = "Updated Name"
       
       // When
       var updatedPlace: Place?
@@ -227,6 +228,7 @@ class PlacesMemStoreTests: XCTestCase {
     func testUpdatePlaceshouldUpdateExistingPlace_GenericEnumResultType() {
       // Given
       var placeToUpdate = testPlaces.first!
+      placeToUpdate.name = "Updated Name"
       
       // When
       var updatedPlace: Place?
@@ -351,6 +353,7 @@ class PlacesMemStoreTests: XCTestCase {
     func testUpdatePlaceshouldUpdateExistingPlace_InnerClosure() {
       // Given
       var placeToUpdate = testPlaces.first!
+      placeToUpdate.name = "Updated Name"
       
       // When
       var updatedPlace: Place?

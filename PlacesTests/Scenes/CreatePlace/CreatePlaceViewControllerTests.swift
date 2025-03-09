@@ -33,7 +33,7 @@ class CreatePlaceViewControllerTests: XCTestCase {
   func setupCreatePlaceViewController() {
     let bundle = Bundle.main
     let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-    sut = storyboard.instantiateViewController(withIdentifier: "CreatePlaceViewController") as! CreatePlaceViewController
+    sut = storyboard.instantiateViewController(withIdentifier: "CreatePlaceViewController") as? CreatePlaceViewController
   }
   
   func loadView() {

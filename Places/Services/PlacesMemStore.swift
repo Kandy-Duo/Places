@@ -121,6 +121,7 @@ class PlacesMemStore: PlacesStoreProtocol, PlacesStoreUtilityProtocol {
     type(of: self).places.append(place)
     completionHandler { return place }
   }
+  
   func updatePlace(placeToUpdate: Place, completionHandler: @escaping (() throws -> Place?) -> Void) {
     if let index = indexOfPlaceWithID(id: placeToUpdate.id) {
       type(of: self).places[index] = placeToUpdate
