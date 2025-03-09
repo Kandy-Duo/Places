@@ -48,7 +48,7 @@ class CreatePlaceInteractor: CreatePlaceBusinessLogic, CreatePlaceDataStore {
     }
   }
   
-  // MARK: - Update order
+  // MARK: - Update place
   
   func updatePlace(request: CreatePlace.UpdatePlace.Request) {
     let placeToUpdate = buildPlaceFromPlaceInputFields(request.placeInputFields)

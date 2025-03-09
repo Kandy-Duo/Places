@@ -43,37 +43,5 @@ class CreatePlaceViewControllerTests: XCTestCase {
   
   // MARK: Test doubles
   
-  class CreatePlaceBusinessLogicSpy: CreatePlaceBusinessLogic {
-    var doSomethingCalled = false
-    
-    func doSomething(request: CreatePlace.Something.Request) {
-      doSomethingCalled = true
-    }
-  }
-  
   // MARK: Tests
-  
-  func testShouldDoSomethingWhenViewIsLoaded() {
-    // Given
-    let spy = CreatePlaceBusinessLogicSpy()
-    sut.interactor = spy
-    
-    // When
-    loadView()
-    
-    // Then
-    XCTAssertTrue(spy.doSomethingCalled, "viewDidLoad() should ask the interactor to do something")
-  }
-  
-  func testDisplaySomething() {
-    // Given
-    let viewModel = CreatePlace.Something.ViewModel()
-    
-    // When
-    loadView()
-    sut.displaySomething(viewModel: viewModel)
-    
-    // Then
-    //XCTAssertEqual(sut.nameTextField.text, "", "displaySomething(viewModel:) should update the name text field")
-  }
 }

@@ -21,7 +21,7 @@ class CreatePlacePresenter: CreatePlacePresentationLogic {
   // MARK: - Create place
   
   func presentCreatedPlace(response: CreatePlace.CreatePlace.Response) {
-    let viewModel = CreatePlace.CreatePlace.ViewModel()
+    let viewModel = CreatePlace.CreatePlace.ViewModel(place: response.place)
     viewController?.displayCreatedPlace(viewModel: viewModel)
   }
   
