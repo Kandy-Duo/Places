@@ -1,0 +1,88 @@
+//
+//  CreatePlaceViewController.swift
+//  Places
+//
+//  Created by Andressa Valengo on 24/01/25.
+//  Copyright (c) 2025 ___ORGANIZATIONNAME___. All rights reserved.
+//
+
+import UIKit
+
+protocol CreatePlaceDisplayLogic: AnyObject {
+  func displayCreatedPlace(viewModel: CreatePlace.CreatePlace.ViewModel)
+  func displayPlaceToEdit(viewModel: CreatePlace.EditPlace.ViewModel)
+  func displayUpdatedPlace(viewModel: CreatePlace.UpdatePlace.ViewModel)
+}
+
+class CreatePlaceViewController: UIViewController, CreatePlaceDisplayLogic {
+  
+  var interactor: CreatePlaceBusinessLogic?
+  var router: (NSObjectProtocol & CreatePlaceRoutingLogic & CreatePlaceDataPassing)?
+
+  // MARK: Object lifecycle
+  
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    setup()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    setup()
+  }
+  
+  // MARK: Setup
+  
+  private func setup() {
+    let viewController = self
+    let interactor = CreatePlaceInteractor()
+    let presenter = CreatePlacePresenter()
+    let router = CreatePlaceRouter()
+    viewController.interactor = interactor
+    viewController.router = router
+    interactor.presenter = presenter
+    presenter.viewController = viewController
+    router.viewController = viewController
+    router.dataStore = interactor
+  }
+  
+  // MARK: Routing
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let scene = segue.identifier {
+      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+      if let router = router, router.responds(to: selector) {
+        router.perform(selector, with: segue)
+      }
+    }
+  }
+  
+  // MARK: View lifecycle
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    doSomething()
+  }
+  
+  // MARK: Do something
+  
+  //@IBOutlet weak var nameTextField: UITextField!
+  
+  func doSomething() {
+    let placeInputFields = CreatePlace.PlaceInputFields(name: "Testing Name")
+    let request = CreatePlace.CreatePlace.Request(placeInputFields: placeInputFields)
+    interactor?.createPlace(request: request)
+  }
+  
+  func displayCreatedPlace(viewModel: CreatePlace.CreatePlace.ViewModel) {
+    //nameTextField.text = viewModel.name
+  }
+  
+  func displayPlaceToEdit(viewModel: CreatePlace.EditPlace.ViewModel) {
+    
+  }
+  
+  func displayUpdatedPlace(viewModel: CreatePlace.UpdatePlace.ViewModel) {
+    
+  }
+}
